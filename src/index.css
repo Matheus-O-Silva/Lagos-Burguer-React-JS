@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   button {
+     @apply border border-black rounded-xl px-5 py-1
+   }
+ }
+
+* {
+   background:rgba(#ffffff);
+   font-family: "Poppins", sans-serif;
+}
+
+
+
