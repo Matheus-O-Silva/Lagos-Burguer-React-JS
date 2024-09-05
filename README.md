@@ -11,14 +11,11 @@ Lagos Burger Express é um projeto voltado para fornecer uma interface visualmen
 - **Login**
 ![Login](https://github.com/user-attachments/assets/aa4bb46f-f6f8-4988-a583-85d0632caa26)
 
-- **menu**
+- **Menu**
 - ![menu](https://github.com/user-attachments/assets/db959b7a-b19b-4bf5-8f31-6bbf47be5227)
 
-- **Cart**
+- **Carrinho**
 ![cart](https://github.com/user-attachments/assets/13cf0018-9dfc-488b-a859-de68cc857c00)
-
-- **Sign in**
-- ![Login](https://github.com/user-attachments/assets/644a308c-f0ad-436b-8ade-9c92c3e16d12)
 
 
 ## 🛠️ Tecnologias
