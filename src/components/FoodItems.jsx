@@ -13,8 +13,8 @@ const FoodItems = () => {
          <div className="py-5">
             <span className="flex items-center justify-center lg:w-full lg:h[100vw] lg:my-14">
                <h1 className="text-2xl font-bold lg:text-5xl">
-                  Itens <span className="font-serif text-yellow">do nosso</span>{" "}
-                  Menu
+                  Itens do nosso 
+                  <span className="font-serif text-yellow">Menu</span>
                </h1>
             </span>
             <div className="flex flex-wrap justify-center gap-10 lg:mx-20">

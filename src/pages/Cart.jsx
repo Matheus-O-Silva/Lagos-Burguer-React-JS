@@ -1,14 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Scrollbars } from "react-custom-scrollbars-2";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import CartItems from "../components/CartItems";
+import { clearCart } from "../redux/slices/CartSlice";
+
 
 const Cart = () => {
+   const navigate = useNavigate();
+   const dispatch = useDispatch();
    const cartItems = useSelector((state) => state.cart.cart);
+
+   const finishOrder = () => {
+      toast.success('Pedido finalizado com sucesso!', {
+      });
+
+      // clear state of cart
+      dispatch(clearCart());
+
+      
+      // redirect user to the menu page
+      navigate('/');
+   };
 
    // Calculate Total Price
    const totalPrice = cartItems.reduce(
@@ -70,13 +89,11 @@ const Cart = () => {
                         Voltar ao Menu
                      </button>
                   </Link>
-                  <Link to={"/success"}>
-                     <button
-                        type="button"
-                        className="px-3 py-2 text-sm font-semibold text-black rounded-md shadow-sm bg-yellow hover:bg-black hover:text-white">
-                        Finalizar Compra
-                     </button>
-                  </Link>
+                  <button onClick={finishOrder}
+                  type="button"
+                  className="px-3 py-2 text-sm font-semibold text-black rounded-md shadow-sm bg-yellow hover:bg-black hover:text-white">
+                     Finalizar Pedido
+                  </button>
                </div>
             </div>
          </div>
