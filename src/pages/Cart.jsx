@@ -4,12 +4,11 @@ import { Scrollbars } from "react-custom-scrollbars-2";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
-
+import { clearCart } from "../redux/slices/CartSlice";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import CartItems from "../components/CartItems";
-import { clearCart } from "../redux/slices/CartSlice";
+import toast from "react-hot-toast";
 
 
 const Cart = () => {
@@ -18,15 +17,16 @@ const Cart = () => {
    const cartItems = useSelector((state) => state.cart.cart);
 
    const finishOrder = () => {
-      toast.success('Pedido finalizado com sucesso!', {
-      });
-
       // clear state of cart
       dispatch(clearCart());
 
-      
-      // redirect user to the menu page
       navigate('/');
+
+      setTimeout(() => {
+         toast.success('Pedido finalizado com sucesso!', {
+            position: "top-center",
+         });
+      }, 100);
    };
 
    // Calculate Total Price
