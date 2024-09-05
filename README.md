@@ -41,13 +41,13 @@ Lagos Burger Express é um projeto voltado para fornecer uma interface visualmen
 Clone o projeto
 
 ```bash
-  git clone https://github.com/mohitmaithanii/Food-Zone.git
+  git clone https://github.com/Matheus-O-Silva/Lagos-Burguer-React-JS
 ```
 
 entre no diretório do projeto
 
 ```bash
-  cd Food-Zone
+  cd Lagos-Burguer-React-JS
 ```
 
 instale as dependências
